@@ -5,7 +5,6 @@ let bodyParser = require('body-parser');
 let router = require('./routes');
 let cors = require('cors');
 let morgan = require('morgan');
-const path = require('path');
 
 // Instanciation du serveur
 let server = express();
