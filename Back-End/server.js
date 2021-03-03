@@ -21,7 +21,7 @@ server.use(morgan('dev'));
 
 // Configuration des routes
 server.get('/', (request, response) => {
-  response.send("Bienvenue sur le nouveau site de Into The Wild !!");
+  response.send("Bienvenue sur le nouveau site de Into The Wild !!!");
 });
 server.use('/api/', router);
 
