@@ -4,14 +4,14 @@ const jwtKey = process.env.SESSION_SECRET
 
 module.exports = {
     generateTokenForUser : (userData) =>{
-        const token = jwt.sign({ userId = userData.id }, jwtKey, {
+        const token = jwt.sign({ userId : userData.id }, jwtKey, {
             expiresIn: '1h',
         })
         return token;
     },
 
     generateTokenForAdministrator : (adminData) =>{
-        const token = jwt.sign({ adminId = adminData.id }, jwtKey, {
+        const token = jwt.sign({ adminId : adminData.id }, jwtKey, {
             expiresIn: '1h',
         })
         return token;

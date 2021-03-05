@@ -38,12 +38,12 @@ module.exports = (sequelize, DataTypes) => {
       models.Order.belongsToMany(models.Tshirt, {
         through: 'OrderProducts',
         foreignKey: 'order_id',
-        as: 'products',
+        as: 'tshirts',
       });
       models.Order.belongsToMany(models.Album, {
         through: 'OrderProducts',
         foreignKey: 'order_id',
-        as: 'products',
+        as: 'albums',
       });
     }
   };
