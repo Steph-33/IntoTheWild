@@ -1,9 +1,7 @@
 // Imports
 const bcrypt = require('bcrypt');
-// const { request, response } = require('express');
 const jwtUtils = require('../utils/jwt.utils');
 const models = require('../models');
-// require('express-async-errors');
 
 function isString(value) {
   return typeof value === 'string' || value instanceof String;
