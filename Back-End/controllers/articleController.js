@@ -108,17 +108,25 @@ module.exports = {
     },
 
     // Supprimer un article
-    deleteArticle : (request, response) => {
-        models.Article.destroy({where : {id : request.params.id}})
-         .then(()=>{
-             return response.status(200).json({
-                 message : `L'article a été supprimé avec succès ! `
-             })
-         })
-         .catch(()=>{
-             return response.status(400).json({
-                 error : `L'article n'a pas pu être supprimé ! ❌`
-             })
-         })
+    deleteArticle : async (request, response) => {
+        await models.Article.findOne({where : {id : request.params.id}})
+        .then(async (articleFound)=>{
+            await models.Article.destroy({where : {id : articleFound.id}})    
+            .then(()=>{
+                return response.status(200).json({
+                    message : `L'article a été supprimé avec succès ! `
+                })
+            })
+            .catch(()=>{
+                return response.status(400).json({
+                    error : `L'article n'a pas pu être supprimé ! ❌`
+                })
+            })
+        })
+        .catch(()=>{
+            return response.status(400).json({
+                error : `L'article que vous voulez supprimer n'existe pas ! ❌`
+            })
+        })
     },
 }
