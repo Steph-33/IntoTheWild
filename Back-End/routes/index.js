@@ -3,6 +3,7 @@ const userRouter = require('./userRoutes');
 const adminRouter = require('./adminRoutes');
 const articleRouter = require('./articleRoutes');
 const memberRouter = require('./memberRoutes');
+const liveRouter = require('./liveRoutes');
 
 
 const router = express.Router();
@@ -11,5 +12,6 @@ router.use(userRouter);
 router.use(adminRouter);
 router.use(articleRouter);
 router.use(memberRouter);
+router.use(liveRouter);
 
 module.exports = router;

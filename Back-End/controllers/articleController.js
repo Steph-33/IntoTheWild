@@ -24,12 +24,10 @@ module.exports = {
         });
         if(!articleFound){
             const newArticle = await models.Article.create({
-                title : request.body.title, 
-                content : request.body.content,
-                date : request.body.date,
-                image : `${request.protocol}://${request.get('host')}/images/${
-                request.file.filename
-                }`,
+                title : article.title, 
+                content : article.content,
+                date : article.date,
+                image : article.image,
             })
             if(newArticle){
                 return response.status(201).json({

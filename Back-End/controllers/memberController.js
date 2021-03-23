@@ -25,12 +25,10 @@ module.exports = {
         })
         if(!memberFound){
             const newMember = await models.Member.create({
-                name : request.body.name,
-                introduction : request.body.introduction,
-                description : request.body.description,
-                image :  `${request.protocol}://${request.get('host')}/images/${
-                request.file.filename
-                }`,
+                name : member.name,
+                introduction : member.introduction,
+                description : member.description,
+                image :  member.image,
             });
             if(newMember){
                 response.status(201).json({

@@ -124,25 +124,25 @@ module.exports = {
     }
   },
 
-  getUserSession: async (request, response, cb) => {
-    const headerAuth = request.headers['authorization'];
-    const userId = jwtUtils.getUserId(headerAuth, response);
-    if (userId < 0) {
-        return response.status(400).json({
-            error : `Mauvaise Requête. Erreur lors de la lecture de l'id de l'utilisateur ❌`
-        })
-    }
-    const user = await models.User.findOne({
-      where: { id: userId },
-    });
-    if (user) {
-      return cb(user.dataValues);
-    }else{
-        return response.status(404).json({
-            error : `Ressource introuvable. Vous devez être connecté pour accéder à cette ressource ❌`
-        })
-    }
-  },
+  // getUserSession: async (request, response, cb) => {
+  //   const headerAuth = request.headers['authorization'];
+  //   const userId = jwtUtils.getUserId(headerAuth, response);
+  //   if (userId < 0) {
+  //       return response.status(400).json({
+  //           error : `Mauvaise Requête. Erreur lors de la lecture de l'id de l'utilisateur ❌`
+  //       })
+  //   }
+  //   const user = await models.User.findOne({
+  //     where: { id: userId },
+  //   });
+  //   if (user) {
+  //     return cb(user.dataValues);
+  //   }else{
+  //       return response.status(404).json({
+  //           error : `Ressource introuvable. Vous devez être connecté pour accéder à cette ressource ❌`
+  //       })
+  //   }
+  // },
 
   getUserById : (id) => {
     return models.User.findByPk(id);

@@ -122,25 +122,25 @@ module.exports = {
     }
   },
 
-  getAdministratorSession: async (request, response, cb) => {
-    const headerAuth = request.headers['authorization'];
-    const adminId = jwtUtils.getAdministratorId(headerAuth, response);
-    if (adminId < 0) {
-        return response.status(400).json({
-            error : `Mauvaise Requête. Erreur lors de la lecture de l'id de l'administrateur. ❌`
-        })
-    }
-    const administrator = await models.Administrator.findOne({
-      where: { id: adminId },
-    });
-    if (administrator) {
-      return cb(administrator.dataValues);
-    } else {
-        return response.status(404).json({
-            error : `Ressource introuvable. Vous devez être connecté pour accéder à cette ressource ❌`
-        })
-    }
-  },
+  // getAdministratorSession: async (request, response, cb) => {
+  //   const headerAuth = request.headers['authorization'];
+  //   const adminId = jwtUtils.getAdministratorId(headerAuth, response);
+  //   if (adminId < 0) {
+  //       return response.status(400).json({
+  //           error : `Mauvaise Requête. Erreur lors de la lecture de l'id de l'administrateur. ❌`
+  //       })
+  //   }
+  //   const administrator = await models.Administrator.findOne({
+  //     where: { id: adminId },
+  //   });
+  //   if (administrator) {
+  //     return cb(administrator.dataValues);
+  //   } else {
+  //       return response.status(404).json({
+  //           error : `Ressource introuvable. Vous devez être connecté pour accéder à cette ressource ❌`
+  //       })
+  //   }
+  // },
 
   getAdministratorById : (id) => {
     return models.Administrator.findByPk(id);
