@@ -12,7 +12,7 @@ module.exports = {
             }`,
         }
         for(const key in article){
-            if(key == null){
+            if(article[key] == null){
                 return response.status(404).json({
                     error : `Le champs ${key} n'est pas renseigné.❌`
                 });
@@ -122,7 +122,7 @@ module.exports = {
             })
         })
         .catch(()=>{
-            return response.status(400).json({
+            return response.status(404).json({
                 error : `L'article que vous voulez supprimer n'existe pas ! ❌`
             })
         })

@@ -1,4 +1,3 @@
-const { request, response } = require('express');
 const models = require('../models');
 
 module.exports= {
@@ -13,7 +12,7 @@ module.exports= {
             }`,
         }
         for(const key in live){
-            if(key == null){
+            if(live[key] == null){
                 return response.status(404).json({
                     error : `Le champs ${key} n'a pas été renseigné.`
                 })

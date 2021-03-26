@@ -1,4 +1,3 @@
-const { request } = require('express');
 const models = require('../models');
 
 module.exports = {
@@ -13,7 +12,7 @@ module.exports = {
             }`,
         }
         for(const key in member){
-            if(key == null){
+            if(member[key] == null){
                 return response.status(404).json({
                     error : `Le champs ${key} n'est pas renseigné ! `
                 })
