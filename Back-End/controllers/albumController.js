@@ -82,12 +82,12 @@ module.exports = {
 
     // Mettre à jour un album
     updateAlbum : async (request, response) => {
-        const album = await models.Album.findOne({
+        const albumFound = await models.Album.findOne({
             attributes : ['id', 'title', 'date', 'set_list', 'price', 'image'],
             where : {id : request.params.id},
         })
-        if(album){
-            const albumFound = {
+        if(albumFound){
+            const album = {
                 title : request.body.title,
                 date : request.body.date,
                 set_list : request.body.set_list,
@@ -96,10 +96,10 @@ module.exports = {
                     request.file.filename
                 }`,
             }
-            await models.Album.update(albumFound, {where : {'id' : request.params.id}})
+            await models.Album.update(album, {where : {'id' : albumFound.id}})
                 .then(()=>{
                     return response.status(201).json({
-                        message : `L'album ${albumFound.title} a été modifié avec succès. `
+                        message : `L'album ${album.title} a été modifié avec succès. `
                     })
                 })
                 .catch(()=>{
