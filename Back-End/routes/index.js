@@ -7,6 +7,7 @@ const liveRouter = require('./liveRoutes');
 const albumRouter = require('./albumRoutes');
 const pictureRouter = require('./pictureRoutes');
 const videoRouter = require('./videoRoutes');
+const addressRouter = require('./addressRoutes');
 
 const router = express.Router();
 
@@ -18,5 +19,6 @@ router.use(liveRouter);
 router.use(albumRouter);
 router.use(pictureRouter);
 router.use(videoRouter);
+router.use(addressRouter);
 
 module.exports = router;

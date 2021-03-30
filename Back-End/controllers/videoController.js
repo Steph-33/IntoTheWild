@@ -1,6 +1,4 @@
-const { response } = require('express')
 const models = require('../models')
-
 
 module.exports = {
     // Ajouter une vidéo
