@@ -1,6 +1,5 @@
 const models = require('../models');
 
-
 module.exports = {
     // Ajouter un album à la discographie
     addAlbum : async(request, response) => {

@@ -8,6 +8,7 @@ const albumRouter = require('./albumRoutes');
 const pictureRouter = require('./pictureRoutes');
 const videoRouter = require('./videoRoutes');
 const addressRouter = require('./addressRoutes');
+const tshirtRouter = require('./tshirtRoutes');
 
 const router = express.Router();
 
@@ -20,5 +21,6 @@ router.use(albumRouter);
 router.use(pictureRouter);
 router.use(videoRouter);
 router.use(addressRouter);
+router.use(tshirtRouter);
 
 module.exports = router;
