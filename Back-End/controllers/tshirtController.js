@@ -1,7 +1,7 @@
 const models = require('../models');
 
 module.exports = {
-    // Ajouter une T-Shirt à la boutique
+    // Ajouter un T-Shirt à la boutique
     addTShirt : async(request, response)=>{
         const tShirt = {
             reference : request.body.reference,
