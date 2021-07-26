@@ -62,11 +62,11 @@ export default function Member() {
     return (
     <div
       method="POST"
-      action="/article"
+      action="/member"
       onSubmit={handleSubmit}
     >
       <h1>Bienvenue {firstname}</h1>
-      <form className="form-article" encType="multipart/form-data">
+      <form encType="multipart/form-data">
         <input
           type="text"
           name="name"
@@ -109,7 +109,7 @@ export default function Member() {
             alt="Prévisualisation"
           />
         </div>
-        <button className="form-article-button" type="submit">
+        <button type="submit">
           Valider
         </button>
       </form>
