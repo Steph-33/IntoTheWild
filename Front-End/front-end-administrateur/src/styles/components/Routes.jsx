@@ -7,6 +7,8 @@ import Member from '../../pages/Members/Member';
 import Article from '../../pages/Articles/Article';
 import Live from '../../pages/Lives/Live';
 import Album from '../../pages/Albums/Album';
+import Picture from '../../pages/Pictures/Picture';
+import Video from '../../pages/Videos/Video';
 
 export default function Routes() {
     return (
@@ -16,6 +18,8 @@ export default function Routes() {
             <ProtectedRoutes exact path="/article" component={Article}/>
             <ProtectedRoutes exact path="/live" component={Live}/>
             <ProtectedRoutes exact path="/album" component={Album}/>
+            <ProtectedRoutes exact path="/picture" component={Picture}/>
+            <ProtectedRoutes exact path="/video" component={Video}/>
             <Route exact path="/" component={Login}/>
         </Switch>
     )

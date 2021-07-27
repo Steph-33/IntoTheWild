@@ -96,7 +96,6 @@ export default function Member() {
             <label htmlFor="image">Sélectionne une image </label>
             <input
               type="file"
-              id="image"
               name="image"
               accept=".jpg, .jpeg, .png"
               onChange={handleFile}
@@ -104,7 +103,6 @@ export default function Member() {
             />
           </div>
           <img
-            className="preview-image"
             src={previewImage}
             alt="Prévisualisation"
           />
