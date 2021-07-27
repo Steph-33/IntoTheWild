@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState, useEffect} from 'react';
 var axios = require('axios');
 
 export default function ArticlesList() {
