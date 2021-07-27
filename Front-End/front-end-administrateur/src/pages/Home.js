@@ -8,17 +8,21 @@ export default function Home() {
       <h1>Bienvenue {firstname}</h1>
       <h3>Que souhaites-tu faire ? </h3>
       <div className="box-buttons">
-        <div className="member-buttons">
-          <Link to="/member">
-            <button className="btn-style">Ajouter un membre au groupe</button>
+        <div className="album-buttons">
+          <Link to="/album">
+            <button className="btn-style">
+              Ajouter un album à la discographie
+            </button>
           </Link>
-          <Link to="/members">
-            <button className="btn-style">Voir la liste des membres du groupe</button>
+          <Link to="/albums">
+            <button className="btn-style">
+              Voir la liste des albums
+            </button>
           </Link>
         </div>
         <div className="article-buttons">
           <Link to="/article">
-            <button className="btn-style">Créer un article</button>
+            <button className="btn-style">Ajouter un article</button>
           </Link>
           <Link to="/articles">
             <button className="btn-style">Voir la liste des articles</button>
@@ -36,16 +40,12 @@ export default function Home() {
             </button>
           </Link>
         </div>
-        <div className="album-buttons">
-          <Link to="/album">
-            <button className="btn-style">
-              Ajouter un album à la discographie
-            </button>
+        <div className="member-buttons">
+          <Link to="/member">
+            <button className="btn-style">Ajouter un membre au groupe</button>
           </Link>
-          <Link to="/albums">
-            <button className="btn-style">
-              Voir la liste des albums
-            </button>
+          <Link to="/members">
+            <button className="btn-style">Voir la liste des membres du groupe</button>
           </Link>
         </div>
         <div className="picture-buttons">

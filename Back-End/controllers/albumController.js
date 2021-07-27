@@ -51,7 +51,7 @@ module.exports = {
     // Récupérer un album par son id
     getAlbumById : async (request,response) => {
         const album = await models.Album.findOne({
-            attributes : ['title', 'date', 'set_list', 'price', 'image'],
+            attributes : ['id','title', 'date', 'set_list', 'price', 'image'],
             where : {'id' : request.params.id},
         })
         if(album){
@@ -66,7 +66,7 @@ module.exports = {
     // Récupérer l'ensemble des albums
     getAllAlbums : async(request, response)=>{
         await models.Album.findAll({
-            attributes : ['title', 'date', 'set_list', 'price', 'image'],
+            attributes : ['id','title', 'date', 'set_list', 'price', 'image'],
         })
         .then((albums)=>{
             return response.status(200).json(albums);
