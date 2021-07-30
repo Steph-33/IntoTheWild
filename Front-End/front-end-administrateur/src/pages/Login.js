@@ -44,12 +44,13 @@ export default function Login() {
     }
 
     return (
-        <div onSubmit = {handelSubmit}>
+        <div className="container" onSubmit = {handelSubmit}>
             {toHome ? <Redirect to="/home" /> : null}
             <h1>Welcome Into The Wild</h1>
             <h3>Merci de t'identifier</h3>
-            <form>
+            <form className="form">
                 <input
+                    className="input"
                     type="email"
                     name="email"
                     placeholder="Entre ton adresse email..."
@@ -58,6 +59,7 @@ export default function Login() {
                     required
                 />
                 <input
+                    className="input"
                     type="password"
                     name="password"
                     placeholder="Mot de passe..."
@@ -65,7 +67,7 @@ export default function Login() {
                     onChange={handleChange}
                     required
                 />
-                <button type="submit">
+                <button className="form-button" type="submit">
                     Connexion
                 </button>
             </form>

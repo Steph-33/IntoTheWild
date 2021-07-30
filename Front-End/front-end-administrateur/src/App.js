@@ -1,8 +1,9 @@
 import { useState } from 'react';
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Routes from './styles/components/Routes';
+import Routes from './components/Routes';
 import AuthContext from './components/AuthContext';
+import "./App.css";
 
 const App = () => {
     const [isAuthenticated,setIsAuthenticated] = useState(false)

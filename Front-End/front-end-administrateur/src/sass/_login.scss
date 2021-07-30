@@ -1,0 +1,49 @@
+$red: #d64438;
+$grey: #999999;
+$black: black;
+
+.container {
+  text-align: center;
+  background-color: $red;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: $black;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+
+.input {
+  height: 0.5rem;
+  width: 30%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1em;
+  outline: none;
+  margin: 1em;
+  font-size: 0.9em;
+}
+
+.form-button {
+  margin: 0.6em;
+  height: 2rem;
+  width: 10%;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: $black;
+  color: $grey;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
