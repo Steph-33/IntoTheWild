@@ -45,18 +45,19 @@ export default function PicturesList() {
       }, []);
 
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         Galerie de Photos
       </h1>
       {allPictures.map((picture, index) => (
-        <div method="POST" key={index}>
-            <div>{picture.name}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-name">{picture.name}</div>
             <img
                 src={picture.image}
                 alt="Prévisualisation"
             />
             <button
+              className="delete-button"
               id={picture.id}
               onClick={handleDelete}
               type="submit"

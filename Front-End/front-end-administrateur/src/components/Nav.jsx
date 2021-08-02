@@ -28,9 +28,9 @@ export default function Nav() {
 
   return (
     <nav>
-      <div className="box-links">
+      <div className="links-box">
         {firstname ? (
-          <div className="box-session">
+          <div className="session-box">
             <NavLink to="/home">
               <img
                 className="logo"

@@ -47,18 +47,19 @@ export default function VideosList() {
 
 
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         Vidéos en ligne
       </h1>
       {allVideos.map((video, index) => (
-        <div method="POST" key={index}>
-            <div>{video.name}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-name">{video.name}</div>
             <img
             src={video.image}
             alt="Prévisualisation de la Vidéo"
             />
             <button
+              className="delete-button"
               id={video.id}
               onClick={handleDelete}
               type="submit"

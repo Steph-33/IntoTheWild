@@ -61,6 +61,7 @@ export default function Picture() {
         <div
             method="POST"
             onSubmit={handleSubmit}
+            className="input-container"
         >
             <h1>Bienvenue {firstname}</h1>
             <form encType="multipart/form-data">
@@ -80,7 +81,7 @@ export default function Picture() {
                     onChange={handleChange}
                     required
                 />
-                <div>
+                <div className="image-selection">
                     <div>
                         <label htmlFor="image">Sélectionne une photo</label>
                         <input

@@ -45,14 +45,15 @@ export default function ArticlesList() {
       }, []);
 
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         Voici la liste des différents articles !
       </h1>
       {allArticles.map((article, index) => (
-        <div method="POST" key={index}>
-            <div>{article.title}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-title">{article.title}</div>
             <button
+              className="delete-button"
               id={article.id}
               onClick={handleDelete}
               type="submit"

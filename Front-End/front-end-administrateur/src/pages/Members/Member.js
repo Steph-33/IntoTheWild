@@ -64,6 +64,7 @@ export default function Member() {
       method="POST"
       action="/member"
       onSubmit={handleSubmit}
+      className="input-container"
     >
       <h1>Bienvenue {firstname}</h1>
       <form encType="multipart/form-data">
@@ -91,7 +92,7 @@ export default function Member() {
           onChange={handleChange}
           required
         />
-        <div>
+        <div className="image-selection">
           <div>
             <label htmlFor="image">Sélectionne une image </label>
             <input

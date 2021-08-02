@@ -1,35 +1,26 @@
-.container-home {
-  text-align: center;
-  background-color: #d64438;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.box-buttons {
-  display: flex;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
-
-.btn-style {
-  margin: 0.6em;
-  height: 2rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  outline: none;
+nav {
   background-color: #666464;
   color: white;
-  font-size: 0.8em;
-  font-weight: 600;
-  border: none;
+}
+nav .links-box .session-box {
+  display: flex;
+  justify-content: space-between;
+}
+nav .links-box .session-box .logo {
+  margin-top: 1rem;
+  margin-left: 1rem;
+  background-color: #666464;
+  border-radius: 0.5rem;
+  width: 10%;
+  height: 65%;
+}
+nav .links-box .session-box .sign-out {
+  margin-right: 2em;
+  margin-top: 1rem;
+  border-radius: 50%;
+  background-color: white;
+  width: 3%;
+  height: 3%;
   cursor: pointer;
 }
 
@@ -44,8 +35,7 @@
   font-size: calc(10px + 2vmin);
   color: black;
 }
-
-.form {
+.container form {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -53,8 +43,7 @@
   flex-direction: column;
   padding-top: 3rem;
 }
-
-.input {
+.container form input {
   height: 0.5rem;
   width: 30%;
   border: none;
@@ -64,47 +53,153 @@
   margin: 1em;
   font-size: 0.9em;
 }
-
-.form-button {
+.container form button {
   margin: 0.6em;
   height: 2rem;
   width: 10%;
   border-radius: 0.5rem;
   outline: none;
   background-color: black;
-  color: #999999;
+  color: #666464;
   font-size: 0.8em;
   font-weight: 600;
   border: none;
   cursor: pointer;
 }
 
-nav {
-  background-color: #666464;
+.home-container {
+  text-align: center;
+  background-color: #d64438;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.box-session {
+.home-container .buttons-box {
   display: flex;
-  justify-content: space-between;
 }
-
-.logo {
-  margin-top: 1rem;
-  margin-left: 1rem;
-  background-color: #666464;
+.home-container .buttons-box .buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem;
+}
+.home-container .buttons-box .buttons .btn-style {
+  margin: 0.6em;
+  height: 2rem;
+  width: 100%;
   border-radius: 0.5rem;
-  width: 10%;
-  height: 65%;
+  outline: none;
+  background-color: #666464;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
 
-.sign-out {
-  margin-right: 2em;
-  margin-top: 1rem;
-  border-radius: 50%;
-  background-color: white;
-  width: 3%;
-  height: 3%;
+.input-container {
+  text-align: center;
+  background-color: #d64438;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+.input-container form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 3rem;
+}
+.input-container form input {
+  height: 0.5rem;
+  width: 30%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1em;
+  outline: none;
+  margin: 1em;
+  font-size: 0.9em;
+}
+.input-container form textarea {
+  height: 15rem;
+  width: 30%;
+  border: none;
+  border-radius: 1rem;
+  padding: 1em;
+  outline: none;
+  margin: 1em;
+  font-size: 0.9em;
+}
+.input-container form .image-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.input-container form .image-selection img {
+  height: 10%;
+  width: 10%;
+}
+.input-container form button {
+  margin: 0.6em;
+  height: 2.3rem;
+  width: 10%;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #666464;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.main-container {
+  min-height: 100vh;
+  color: white;
+  background-color: #d64438;
+  font-weight: bold;
+}
+.main-container .introduction-sentence {
+  margin-top: auto;
+  text-align: center;
+  background-color: #d64438;
+  color: white;
+}
+.main-container .object-container {
+  display: flex;
+  width: 80vw;
+  padding-top: 2em;
+  margin-left: 11em;
+}
+.main-container .object-container .object-title,
+.main-container .object-container .object-place,
+.main-container .object-container .object-date,
+.main-container .object-container .object-name {
+  width: 30vw;
+}
+.main-container .object-container img {
+  width: 20%;
+  margin-right: 15vw;
+}
+.main-container .object-container .delete-button {
+  margin-right: 1%;
+  height: 2rem;
+  width: 10vw;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: #666464;
+  color: white;
+  font-size: 0.8em;
+  font-weight: 600;
+  border: none;
   cursor: pointer;
 }
 

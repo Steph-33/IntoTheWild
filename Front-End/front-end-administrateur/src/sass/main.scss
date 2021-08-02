@@ -1,6 +1,9 @@
-@import './home';
-@import './login';
+@import './variables';
 @import './nav';
+@import './login';
+@import './home';
+@import './inputs';
+@import './lists';
 
 body {
   margin: 0;

@@ -45,14 +45,15 @@ export default function AlbumsList() {
       }, []);
       
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         Voici la liste des différents albums !
       </h1>
       {allAlbums.map((album, index) => (
-        <div method="POST" key={index}>
-            <div>{album.title}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-title">{album.title}</div>
             <button
+              className="delete-button"
               id={album.id}
               onClick={handleDelete}
               type="submit"

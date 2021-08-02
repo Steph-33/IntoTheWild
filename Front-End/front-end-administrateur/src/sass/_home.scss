@@ -1,8 +1,4 @@
-$red: #d64438;
-$grey: #666464;
-$black: black;
-
-.container-home {
+.home-container {
   text-align: center;
   background-color: $red;
   min-height: 100vh;
@@ -11,28 +7,28 @@ $black: black;
   align-items: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
 
-.box-buttons {
-  display: flex;
-}
+  & .buttons-box {
+    display: flex;
 
-.buttons {
-  display: flex;
-  flex-direction: column;
-  margin: 1rem;
-}
+    & .buttons {
+      display: flex;
+      flex-direction: column;
+      margin: 1rem;
 
-.btn-style {
-  margin: 0.6em;
-  height: 2rem;
-  width: 100%;
-  border-radius: 0.5rem;
-  outline: none;
-  background-color: $grey;
-  color: white;
-  font-size: 0.8em;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
+      & .btn-style {
+        margin: 0.6em;
+        height: 2rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        outline: none;
+        background-color: $grey;
+        color: white;
+        font-size: 0.8em;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+      }
+    }
+  }
 }

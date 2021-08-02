@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom'
 export default function Home() {
     const firstname = localStorage.firstname;
     return (
-    <div className="container-home">
+    <div className="home-container">
       <h1>Bienvenue {firstname}</h1>
       <h3>Que souhaites-tu faire ? </h3>
-      <div className="box-buttons">
+      <div className="buttons-box">
         <div className="buttons">
           <Link to="/album">
             <button className="btn-style">

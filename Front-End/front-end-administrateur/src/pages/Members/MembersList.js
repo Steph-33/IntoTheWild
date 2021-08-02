@@ -45,14 +45,15 @@ export default function MembersList() {
       }, []);
 
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         They are Into The Wild !
       </h1>
       {allMembers.map((member, index) => (
-        <div method="POST" key={index}>
-            <div>{member.name}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-name">{member.name}</div>
             <button
+              className="delete-button"
               id={member.id}
               onClick={handleDelete}
               type="submit"

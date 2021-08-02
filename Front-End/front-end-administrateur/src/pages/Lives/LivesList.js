@@ -45,15 +45,16 @@ export default function LivesList() {
       }, []);
 
     return (
-    <div>
-      <h1>
+    <div className="main-container">
+      <h1 className="introduction-sentence">
         Voici la liste des différents concerts !
       </h1>
       {allLives.map((live, index) => (
-        <div method="POST" key={index}>
-            <div>{live.place}</div>
-            <div>{live.date}</div>
+        <div className="object-container" method="POST" key={index}>
+            <div className="object-place">{live.place}</div>
+            <div className="object-date">{live.date}</div>
             <button
+              className="delete-button"
               id={live.id}
               onClick={handleDelete}
               type="submit"

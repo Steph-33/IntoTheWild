@@ -48,9 +48,8 @@ export default function Login() {
             {toHome ? <Redirect to="/home" /> : null}
             <h1>Welcome Into The Wild</h1>
             <h3>Merci de t'identifier</h3>
-            <form className="form">
+            <form className="container_form">
                 <input
-                    className="input"
                     type="email"
                     name="email"
                     placeholder="Entre ton adresse email..."
@@ -59,7 +58,6 @@ export default function Login() {
                     required
                 />
                 <input
-                    className="input"
                     type="password"
                     name="password"
                     placeholder="Mot de passe..."
@@ -67,7 +65,7 @@ export default function Login() {
                     onChange={handleChange}
                     required
                 />
-                <button className="form-button" type="submit">
+                <button type="submit">
                     Connexion
                 </button>
             </form>

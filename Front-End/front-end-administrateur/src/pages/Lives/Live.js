@@ -63,6 +63,7 @@ export default function Live() {
         method="POST"
         action="/live"
         onSubmit={handleSubmit}
+        className="input-container"
         >
             <h1>Bienvenue {firstname}</h1>
             <form encType="multipart/form-data">
@@ -90,7 +91,7 @@ export default function Live() {
                     onChange={handleChange}
                     required
                 />
-                <div>
+                <div className="image-selection">
                     <div>
                         <label htmlFor="image">Sélectionne une image </label>
                         <input
